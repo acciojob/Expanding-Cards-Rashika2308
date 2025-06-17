@@ -1,1 +1,119 @@
-/*  your css code here. If applicable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    gap: 15px;
+    padding: 20px;
+}
+
+.panel {
+    flex: 0.5;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.7s ease-in;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active .img-text {
+    opacity: 1;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 10;
+}
+
+.subtitle {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 10;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 90vh;
+    }
+    
+    .panel {
+        width: 100%;
+        flex: 0.5;
+    }
+    
+    .panel.active {
+        flex: 5;
+    }
+    
+    .title {
+        font-size: 2rem;
+        top: 10px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        top: 50px;
+    }
+}
