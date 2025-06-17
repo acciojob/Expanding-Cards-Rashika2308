@@ -34,6 +34,7 @@ body {
     cursor: pointer;
     transition: all 0.7s ease-in;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .panel.active {
@@ -56,6 +57,7 @@ body {
     opacity: 1;
 }
 
+/* Decorative elements */
 .title {
     position: absolute;
     top: 20px;
